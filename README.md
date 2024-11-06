@@ -1,1 +1,1 @@
-# k-chain-scenario-go
+# kalyan blockchain scenarios: The Go framework
