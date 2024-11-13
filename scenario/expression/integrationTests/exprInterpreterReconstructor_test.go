@@ -189,10 +189,10 @@ func TestSCBech32(t *testing.T) {
 		Bech32Addr: true,
 	}
 
-	result, err := ei.InterpretString("bech32:moa1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllsxxctf0")
-	require.Nil(t, err)       
-	require.Equal(t, []byte("\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xff\xff"), result)
-	require.Equal(t, "bech32:moa1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllsxxctf0", er.Reconstruct(result, mer.AddressHint))
+	result, err := ei.InterpretString("bech32:moa1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqsqxnugj")
+	require.Nil(t, err) 
+	require.Equal(t, []byte("\x23\x33\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x33\x30\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"), result)
+	require.Equal(t, "bech32:moa1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqsqxnugj", er.Reconstruct(result, mer.AddressHint))
 }
 
 func TestSCAddress(t *testing.T) {
